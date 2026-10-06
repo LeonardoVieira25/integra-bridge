@@ -18,4 +18,20 @@ public class ContratoPremiumTest {
         assertEquals(1500.0, premio, 0.001);
     }
 
+    @Test
+    void testCalcularValorPremiumMoto() {
+        ContratoPremium contratoPremiumMoto = new ContratoPremium(new FabricaMoto());
+        double valor = contratoPremiumMoto.calcularValor();
+        assertEquals(50.0, valor, 0.001);
+        assertEquals(800.0, contratoPremiumMoto.calcularTotal(), 0.001);
+    }
+
+    @Test
+    void testCalcularValorPremiumCarro() {
+        ContratoPremium contratoPremiumCarro = new ContratoPremium(new FabricaCarro());
+        double valor = contratoPremiumCarro.calcularValor();
+        assertEquals(100.0, valor, 0.001);
+        assertEquals(1600.0, contratoPremiumCarro.calcularTotal(), 0.001);
+    }
+
 }

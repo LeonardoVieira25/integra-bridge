@@ -7,4 +7,9 @@ public class ContratoBasico extends Contrato {
     public double calcularPremio() {
         return seguro.calcularPremio();
     }
+
+    @Override
+    public double calcularValor() {
+        return assistencia.calcularValor();
+    }
 }
